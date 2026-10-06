@@ -3,6 +3,335 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Software Development Company | Braba Labs</title>
+<meta name="description" content="Braba Labs builds AI-powered applications, SaaS platforms, mobile apps, and business automation solutions. From concept to launch, faster with AI-native development.">
+<meta name="theme-color" content="#0e1116">
+<style>
+  :root {
+    --bg: #0e1116;
+    --bg-elev: #151a22;
+    --line: #232b36;
+    --text: #e8ebf0;
+    --muted: #9aa5b4;
+    --accent: #7cc4a4;
+    --accent-ink: #0b1a14;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --gutter: clamp(18px, 5vw, 32px);
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f5f0;
+      --bg-elev: #ffffff;
+      --line: #e3ded3;
+      --text: #1a1d21;
+      --muted: #5d6673;
+      --accent: #1f6b4f;
+      --accent-ink: #ffffff;
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; }
+  .wrap { width: 100%; max-width: 1040px; margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+
+  /* Header */
+  header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(10px);
+    background: color-mix(in srgb, var(--bg) 82%, transparent); border-bottom: 1px solid var(--line); }
+  nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .logo { font-family: var(--serif); font-size: 1.3rem; letter-spacing: .02em; text-decoration: none; font-weight: 600; white-space: nowrap; }
+  .logo span { color: var(--accent); }
+  nav ul { display: flex; gap: 26px; list-style: none; margin: 0; padding: 0; }
+  nav ul a { text-decoration: none; color: var(--muted); font-size: .95rem; transition: color .2s; }
+  nav ul a:hover { color: var(--text); }
+  nav .nav-cta { color: var(--accent); font-weight: 600; }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; }
+  .hero-inner { padding-top: 104px; padding-bottom: 88px; position: relative; }
+  .hero::before {
+    content: ""; position: absolute; top: -160px; right: -200px; width: 560px; height: 560px;
+    background: radial-gradient(closest-side, color-mix(in srgb, var(--accent) 22%, transparent), transparent);
+    pointer-events: none;
+  }
+  .eyebrow { font-family: var(--mono); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 0 0 20px; }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2.2rem, 7vw, 4.2rem); line-height: 1.08; margin: 0 0 18px; max-width: 15ch; letter-spacing: -.01em; overflow-wrap: break-word; }
+  h1 em { font-style: italic; color: var(--accent); }
+  .tagline { font-family: var(--serif); font-size: clamp(1.15rem, 3vw, 1.5rem); margin: 0 0 18px; color: var(--text); }
+  .lead { font-size: 1.08rem; color: var(--muted); max-width: 60ch; margin: 0 0 30px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 0 0 40px; }
+  .chips li { border: 1px solid var(--line); background: var(--bg-elev); border-radius: 999px; padding: 7px 14px; font-size: .88rem; }
+  .chips li::before { content: "✓"; color: var(--accent); margin-right: 8px; font-weight: 700; }
+  .cta { display: flex; flex-wrap: wrap; gap: 14px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 22px; border-radius: 999px;
+    text-decoration: none; font-weight: 600; font-size: .95rem; border: 1px solid var(--line); transition: transform .15s, background .2s, border-color .2s; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .btn.ghost:hover { border-color: var(--accent); }
+
+  /* Sections */
+  section { padding: 84px 0; border-top: 1px solid var(--line); }
+  h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.7rem, 4vw, 2.5rem); margin: 0 0 14px; letter-spacing: -.01em; line-height: 1.15; }
+  .kicker { font-family: var(--mono); font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
+  .section-lead { color: var(--muted); max-width: 62ch; margin: 0 0 44px; }
+
+  .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); }
+  .card { background: var(--bg-elev); border: 1px solid var(--line); border-radius: 16px; padding: 26px; transition: border-color .2s, transform .2s; }
+  .card:hover { border-color: color-mix(in srgb, var(--accent) 60%, var(--line)); transform: translateY(-2px); }
+  .card .num { font-family: var(--mono); font-size: .8rem; color: var(--accent); }
+  .card h3 { font-family: var(--serif); font-weight: 500; font-size: 1.3rem; margin: 8px 0 8px; line-height: 1.25; }
+  .card p { margin: 0 0 12px; color: var(--muted); font-size: .96rem; }
+  .card ul { margin: 0; padding: 0; list-style: none; font-size: .9rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 12px; }
+  .card ul li { padding: 2px 0; }
+  .card ul li::before { content: "→"; color: var(--accent); margin-right: 8px; }
+
+  .benefits { display: grid; gap: 12px 28px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); list-style: none; padding: 0; margin: 36px 0 0; }
+  .benefits li { padding-left: 26px; position: relative; }
+  .benefits li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+  .steps .card h3 { margin-top: 10px; }
+
+  /* Docs panel */
+  .docs { display: grid; gap: 40px; grid-template-columns: 1.1fr .9fr; align-items: center; }
+  .terminal { background: #0a0d12; color: #cfd6e0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; font-family: var(--mono); font-size: .86rem; min-width: 0; }
+  .terminal .bar { display: flex; gap: 7px; padding: 12px 14px; border-bottom: 1px solid #1c232d; }
+  .terminal .bar i { width: 11px; height: 11px; border-radius: 50%; background: #2a323e; display: block; }
+  .terminal pre { margin: 0; padding: 20px; overflow-x: auto; line-height: 1.8; }
+  .terminal .p { color: #7cc4a4; }
+  .terminal .c { color: #6b7686; }
+  .repo-link { display: inline-block; font-family: var(--mono); font-size: .88rem; color: var(--accent); text-decoration: none; margin-top: 14px; word-break: break-all; }
+  .repo-link:hover { text-decoration: underline; }
+
+  /* Contact */
+  .contact-box { background: var(--bg-elev); border: 1px solid var(--line); border-radius: 20px; padding: clamp(24px, 5vw, 48px); }
+  .contacts { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); margin-top: 28px; }
+  .contact { display: flex; flex-direction: column; gap: 4px; text-decoration: none; background: var(--bg);
+    border: 1px solid var(--line); border-radius: 14px; padding: 22px; transition: border-color .2s, transform .2s; }
+  .contact:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .contact .name { font-family: var(--serif); font-size: 1.4rem; }
+  .contact .mail { color: var(--accent); font-size: .98rem; overflow-wrap: anywhere; }
+
+  footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--muted); font-size: .88rem; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+  @media (max-width: 760px) {
+    nav ul { gap: 16px; }
+    nav ul li:not(:last-child) { display: none; }
+    .hero-inner { padding-top: 64px; padding-bottom: 56px; }
+    .docs { grid-template-columns: 1fr; gap: 28px; }
+    section { padding: 60px 0; }
+    .btn { width: 100%; }
+    .hero::before { width: 360px; height: 360px; right: -180px; top: -120px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="logo" href="#top">Braba <span>Labs</span></a>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#docs">Docs</a></li>
+        <li><a class="nav-cta" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">AI-powered software development &amp; product innovation</p>
+      <h1>Build your next product with <em>AI</em></h1>
+      <p class="tagline">From idea to production in days, not months.</p>
+      <p class="lead">Braba Labs helps startups, entrepreneurs, and businesses rapidly create modern software using AI-assisted engineering, automation, and human expertise. Whether you need a mobile app, internal tool, AI assistant, marketplace, booking platform, or a complete SaaS product, we help you launch faster and smarter.</p>
+      <ul class="chips" aria-label="What we deliver">
+        <li>AI Applications</li>
+        <li>iOS &amp; Mobile Apps</li>
+        <li>Web Platforms</li>
+        <li>Business Automation</li>
+        <li>MVP Development</li>
+        <li>Product Strategy</li>
+      </ul>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Let's build something great →</a>
+        <a class="btn ghost" href="https://github.com/tokkul/docs" target="_blank" rel="noopener">Read the docs</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="why">
+    <div class="wrap">
+      <p class="kicker">Why Braba Labs</p>
+      <h2>Fast development. Real engineering.</h2>
+      <p class="section-lead">AI has changed software development. By combining modern AI tools with experienced software engineering, we dramatically reduce development time while maintaining quality, scalability, and security. Many projects that once took months can now be delivered in weeks.</p>
+      <ul class="benefits">
+        <li>Faster delivery</li>
+        <li>Lower development cost</li>
+        <li>Continuous iteration</li>
+        <li>Modern AI capabilities built in</li>
+        <li>Transparent collaboration</li>
+        <li>Production-ready solutions</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <p class="kicker">Services</p>
+      <h2>What we build</h2>
+      <p class="section-lead">Custom apps, AI solutions, automation, and digital products at startup speed.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>AI product development</h3>
+          <p>Integrate large language models, AI agents, knowledge assistants, content generation, document processing, and intelligent workflows.</p>
+          <ul><li>Customer support AI</li><li>Internal knowledge assistants</li><li>Travel assistants</li><li>AI research tools</li><li>Content automation</li></ul>
+        </article>
+        <article class="card">
+          <h3>Mobile apps</h3>
+          <p>Native iPhone and iPad applications built with modern Apple technologies.</p>
+          <ul><li>Consumer apps</li><li>Travel apps</li><li>Community apps</li><li>Location-based services</li><li>Business tools</li></ul>
+        </article>
+        <article class="card">
+          <h3>SaaS platforms</h3>
+          <p>Turn your business idea into a scalable web platform.</p>
+          <ul><li>Subscription services</li><li>Marketplaces</li><li>Booking systems</li><li>Client portals</li><li>Membership platforms</li></ul>
+        </article>
+        <article class="card">
+          <h3>Automation &amp; integration</h3>
+          <p>Reduce manual work and connect your existing systems.</p>
+          <ul><li>CRM integrations</li><li>Reporting automation</li><li>Data synchronization</li><li>Internal workflows</li><li>AI-powered operations</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <p class="kicker">How we work</p>
+      <h2>AI-native development</h2>
+      <p class="section-lead">A short, transparent loop from first conversation to a product in real users' hands.</p>
+      <div class="grid steps">
+        <article class="card">
+          <span class="num">01</span>
+          <h3>Discovery</h3>
+          <p>We identify opportunities, define scope, and validate assumptions.</p>
+        </article>
+        <article class="card">
+          <span class="num">02</span>
+          <h3>Rapid prototyping</h3>
+          <p>Interactive prototypes and working proofs of concept, delivered quickly.</p>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <h3>Development</h3>
+          <p>AI-assisted engineering accelerates delivery while maintaining professional standards.</p>
+        </article>
+        <article class="card">
+          <span class="num">04</span>
+          <h3>Launch &amp; iterate</h3>
+          <p>Real user feedback drives continuous improvement.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="clients">
+    <div class="wrap">
+      <p class="kicker">Ideal clients</p>
+      <h2>Who we help</h2>
+      <p class="section-lead" style="margin-bottom:36px"></p>
+      <div class="grid">
+        <article class="card"><h3>Startups</h3><p>Launch an MVP quickly and validate your market.</p></article>
+        <article class="card"><h3>Small businesses</h3><p>Automate workflows and reduce operational costs.</p></article>
+        <article class="card"><h3>Established companies</h3><p>Experiment with AI and accelerate innovation initiatives.</p></article>
+        <article class="card"><h3>Entrepreneurs</h3><p>Turn ideas into products without building an internal development team.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <p class="kicker">Portfolio</p>
+      <h2>Recent projects</h2>
+      <p class="section-lead"></p>
+      <div class="grid">
+        <article class="card">
+          <h3>AI Travel Companion</h3>
+          <p>Location-aware travel assistant providing local insights and recommendations.</p>
+        </article>
+        <article class="card">
+          <h3>Shared Timeline App</h3>
+          <p>Collaborative timeline platform with cloud synchronization and sharing.</p>
+        </article>
+        <article class="card">
+          <h3>Business Automation Platform</h3>
+          <p>Automated document workflows reducing manual administration.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-box">
+        <p class="kicker">Have an idea?</p>
+        <h2>The best time to build is now.</h2>
+        <p class="section-lead" style="margin-bottom:0">Let's discuss your product, AI initiative, or automation project and explore what can be created in a matter of weeks. Write to either of us.</p>
+        <div class="contacts">
+          <a class="contact" href="mailto:pete@braba.se">
+            <span class="name">Peter</span>
+            <span class="mail">peter@braba.se</span>
+          </a>
+          <a class="contact" href="mailto:ture@braba.se">
+            <span class="name">Ture</span>
+            <span class="mail">ture@braba.se</span>
+          </a>
+          <a class="contact" href="mailto:jaana@braba.se">
+            <span class="name">Jaana</span>
+            <span class="mail">jaana@braba.se</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <script>document.write(new Date().getFullYear())</script> Braba Labs</span>
+    <span><a href="https://github.com/tokkul/docs" target="_blank" rel="noopener">Docs on GitHub</a> · <a href="https://www.braba.se">braba.se</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Braba — Software Development</title>
 <meta name="description" content="Braba builds careful, well-documented software. Read our docs on GitHub or get in touch.">
 <meta name="theme-color" content="#0e1116">
